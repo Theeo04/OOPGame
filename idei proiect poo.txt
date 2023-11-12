@@ -1,0 +1,28 @@
+Multiple Game Modes: Add multiple game modes to the game, such as a campaign mode or a survival mode. 
+	In campaign mode, the player can progress through a story with multiple battles. 
+	In survival mode, the player fights an endless wave of enemies until they are defeated.
+
+poison: sansa de 20% sa reuseasca un atac -80 viata;
+
+fight 1v1: sa fie introduse statusurile: daca fight point pt player 1 > fight point pt player 1 => defensive point pt player 1 < defensive point pt player 2
+si valoarea nu poate fi mai mica/mare de 20% decat a celuilalt minim este 80 de pct fight/defense  
+
+/////////////////////////////////////////////////////////////poison/////////////////////////////////////////////////////////
+		
+		void poison_attack(Character& attacker, Character& target, viata(points) , attack(points))
+		{
+		attack =attack - (attack * 60)/100;
+		viata =viata - (viata * 60)/100; 
+    		int numarMaxim = 100;
+    		int random = rand() % (numarMaxim + 1);
+    			if((random>=20)&&(random <= 40))//sansa de 20% ca target-ul sa fie otravit(-85) viata  
+    			{
+    			attacker.attack_points=attacker.attack_points - attack;
+			target.health = target.health - viata;
+			}
+		}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1.cum functioneaza story modeul ? -- algoritm
+
